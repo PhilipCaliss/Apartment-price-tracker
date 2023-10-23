@@ -25,14 +25,12 @@ else:
 def clean_price(price):
     return price.replace('\xa0', ' ')
 
-# ... (rest of your code)
 
 listed_price = clean_price(listing.select_one("div.listing-card__attributes-row div.listing-card__attribute--primary").text.strip()) if listing.select_one("div.listing-card__attributes-row div.listing-card__attribute--primary") else None
 apartment_size = listing.select_one("div.listing-card__attributes-row > div:nth-child(2)").text.strip() if listing.select_one("div.listing-card__attributes-row > div:nth-child(2)") else None
 num_rooms = listing.select_one("div.listing-card__attributes-row > div:nth-child(3)").text.strip() if listing.select_one("div.listing-card__attributes-row > div:nth-child(3)") else None
 monthly_price = clean_price(listing.select_one("div.listing-card__attributes-row + div.listing-card__attributes-row div.listing-card__attribute--fee").text.strip()) if listing.select_one("div.listing-card__attributes-row + div.listing-card__attributes-row div.listing-card__attribute--fee") else None
 
-# ... (rest of your code)
 # Creating the dictionary
 apartment_data = {
     listing_id: {
