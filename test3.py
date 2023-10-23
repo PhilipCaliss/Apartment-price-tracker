@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 
 BASE_URL = "https://www.hemnet.se/bostader?location_ids%5B%5D=925964&item_types%5B%5D=bostadsratt&page="
-headers = {'User-Agent': '*'}
+headers = {'User-Agent': '*'} # This is to avoid getting blocked by the server, check www.hemnet.se/robots.txt
 page_num = 1
 
 
