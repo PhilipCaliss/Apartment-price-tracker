@@ -1,3 +1,6 @@
 env
 test*.py
-hemnet.xslx
+.vscode
+hemnet.xlsx
+experimental.ipynb
+.gitignore
